@@ -40,7 +40,7 @@ There's also a `VITE_ENABLE_TESTNETS` boolean value you can set in order to enab
 First, clone this repo:
 
 ```sh
-git clone https://github.com/tablelandnetwork/react-js-tableland-template
+git clone https://github.com/tablelandnetwork/react-ts-tableland-template
 ```
 
 To get started, you can run `npm run up` to start the app. This runs `npm install` plus the `build` / `start` scripts and then serves the application at [http://localhost:4173](http://localhost:4173). The starter template includes the following, located in `src/components/Tableland.jsx`:
