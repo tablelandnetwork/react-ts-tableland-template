@@ -12,9 +12,10 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
     chain.polygon,
     chain.optimism,
     chain.arbitrum,
+    chain.filecoin,
     ...(import.meta.env.VITE_ENABLE_TESTNETS === "true"
       ? [
-          chain.arbitrumGoerli,
+          chain.arbitrumSepolia,
           chain.sepolia,
           chain.polygonMumbai,
           chain.optimismGoerli,
