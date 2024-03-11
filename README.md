@@ -4,7 +4,6 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
 - [Background](#background)
 - [Usage](#usage)
   - [Prerequisites](#prerequisites)
@@ -21,15 +20,11 @@ This repo contains starter code for a React + [wagmi](https://wagmi.sh/) + [Rain
 
 ### Prerequisites
 
-Before you get started, you'll need to do the following:
+Before you get started, you'll need to create a WalletConnect account and create a project and retrieve the project ID: [here](https://walletconnect.com/)
 
-- Create an Alchemy account and get an API key: [here](https://www.alchemy.com/)
-- Create a WalletConnect account and create a project and retrieve the project ID: [here](https://walletconnect.com/)
-
-Alchemy is used as an EVM node provider, and RainbowKit/wagmi require a WalletConnect project ID in order to work properly. These should be set up and configured in a `.env` file within this project's root and saved to the following variables:
+RainbowKit & wagmi require a WalletConnect project ID in order to work properly. These should be set up and configured in a `.env` file within this project's root and saved to the following variables:
 
 ```txt
-VITE_ALCHEMY_API_KEY=your_alchemy_api_key
 VITE_WALLET_CONNECT_PROJECT_ID=your_wallet_connect_project_id
 ```
 

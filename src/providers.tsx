@@ -1,16 +1,21 @@
 import { RainbowKitProvider, darkTheme } from "@rainbow-me/rainbowkit";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import * as React from "react";
-import { WagmiConfig } from "wagmi";
-import { chains, config } from "./wagmi";
+import { WagmiProvider } from "wagmi";
+import { config } from "./wagmi";
+
+const queryClient = new QueryClient();
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = React.useState(false);
   React.useEffect(() => setMounted(true), []);
   return (
-    <WagmiConfig config={config}>
-      <RainbowKitProvider chains={chains} theme={darkTheme()}>
-        {mounted && children}
-      </RainbowKitProvider>
-    </WagmiConfig>
+    <WagmiProvider config={config}>
+      <QueryClientProvider client={queryClient}>
+        <RainbowKitProvider theme={darkTheme()}>
+          {mounted && children}
+        </RainbowKitProvider>
+      </QueryClientProvider>
+    </WagmiProvider>
   );
 }
