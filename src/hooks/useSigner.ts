@@ -13,7 +13,7 @@ function walletClientToSigner(
     name: chain.name,
     ensAddress: chain.contracts?.ensRegistry?.address,
   };
-  const provider = new providers.JsonRpcProvider(transport.url, network);
+  const provider = new providers.Web3Provider(transport, network);
   const signer = provider.getSigner(account.address);
   return signer;
 }
