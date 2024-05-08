@@ -14,7 +14,7 @@ const chains = [
     ? [
         chain.arbitrumSepolia,
         chain.sepolia,
-        chain.polygonMumbai,
+        chain.polygonAmoy,
         chain.optimismSepolia,
         chain.filecoinCalibration,
         chain.hardhat,
